@@ -13,6 +13,8 @@ Load posts and route to each post with ui-router.
 
 - `npm start`: starts the development environment.
 - `npm stop`: stops all the processes that are in the background.
+- `npm run build`: Builds the project.
+- `npm test`: coming soon ...
 
 For more tasks, check out the `package.json` file in the root of the app.
 

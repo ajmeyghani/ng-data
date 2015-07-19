@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup-client": "cd client && npm i",
+    "setup-server": "cd server && npm i",
+    "setup": "npm i && npm run setup-client && npm run setup-server",
     "pm2": "./node_modules/pm2/bin/pm2",
     "build": "cd client && ./node_modules/webpack/bin/webpack.js -p --progress --colors --debug",
     "server": "cd server && ../node_modules/pm2/bin/pm2 start app/index.js --watch --name 'server'",

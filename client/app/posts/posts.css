@@ -1,0 +1,10 @@
+@custom-media --small-screens (width <= 900px);
+
+@media (--small-screens) {
+  body {
+    background-color: #ccc;
+  }
+}
+h1 {
+  font-size: 2rem;
+}

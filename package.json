@@ -10,14 +10,14 @@
     "pm2": "./node_modules/pm2/bin/pm2",
     "build": "cd client && ./node_modules/webpack/bin/webpack.js -p --progress --colors --debug",
     "server": "cd server && ../node_modules/pm2/bin/pm2 start app/index.js --watch --name 'server'",
-    "server-dev": "cd client && ../node_modules/pm2/bin/pm2 start dev-server.js --name 'dev-server'",
+    "server-dev": "cd client/tasks && ../../node_modules/pm2/bin/pm2 start dev-server.js --name 'dev-server'",
     "server-stat": "npm run pm2 -- show server && npm run pm2 -- show dev-server",
     "open": "cd client && tasks/run.js",
     "start": "npm run server && npm run server-dev && npm run open && npm run pm2 -- logs",
     "stop": "npm run pm2 -- kill",
     "reload": "npm run pm2 -- restart all"
   },
-  "author": "",
+  "author": "Amin Meyghani",
   "license": "ISC",
   "devDependencies": {
     "pm2": "^0.14.3"

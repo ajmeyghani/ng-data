@@ -2,7 +2,8 @@
 <a ui-sref="list()">all</a>
 <ul>
 
-  <p> ({{postDetail.currentPost.id}}) {{ postDetail.currentPost.title }}</p>
+  <p> post id: {{postDetail.currentPost.id}}: <strong>{{ postDetail.currentPost.title }}</strong></p>
+  <p> by user {{postDetail.currentPost.userId}} </p>
   <p>{{ postDetail.currentPost.body }}</p>
 
 </ul>

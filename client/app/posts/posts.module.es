@@ -5,7 +5,10 @@ export default ngMod => {
     return data;
   });
 
+  ON_TEST && require('./test/posts.ctrl.test.es')(ngMod);
+
   ngMod.controller('PostsCtrl', function ($http, $state, data) {
+    this.entries = data.entries;
     data.entries.then(s => { this.data = s.data; });
   });
 

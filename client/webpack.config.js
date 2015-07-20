@@ -15,10 +15,10 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test:   /\.css$/,
-        loader: "style-loader!css-loader!cssnext-loader"
-      },
+      // {
+      //   test:   /\.css$/,
+      //   loader: "style-loader!css-loader!cssnext-loader"
+      // },
       {
         test: /\.es?$/,
         loader: 'babel'

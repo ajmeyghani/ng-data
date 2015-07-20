@@ -6,7 +6,7 @@ export default ngMod => {
   require('./posts.module.es')(ngMod);
 
   // dependnet css
-  require('./posts.css');
+  // require('./posts.css');
 
   // components definition.
   ngMod.directive('posts', () => {

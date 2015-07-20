@@ -13,13 +13,17 @@
     "server-dev": "cd client/tasks && ../../node_modules/pm2/bin/pm2 start dev-server.js --name 'dev-server'",
     "server-stat": "npm run pm2 -- show server && npm run pm2 -- show dev-server",
     "open": "cd client && tasks/run.js",
-    "start": "npm run server && npm run server-dev && npm run open && npm run pm2 -- logs",
+    "start": "npm run server && npm run server-dev && npm run open && npm run pm2 -- start client/tasks/test-dev.sh && npm run pm2 -- logs",
+    "test": "cd client && NODE_ENV=test ./node_modules/karma/bin/karma start karma.config.js --single-run",
+    "test-dev": "cd client && NODE_ENV=test ./node_modules/karma/bin/karma start karma.config.js",
     "stop": "npm run pm2 -- kill",
-    "reload": "npm run pm2 -- restart all"
+    "reload": "npm run pm2 -- restart all",
+    "tt": "npm run test-dev && npm run pm2 -- logs"
   },
   "author": "Amin Meyghani",
   "license": "ISC",
   "devDependencies": {
+    "jasmine-core": "^2.3.4",
     "pm2": "^0.14.3"
   }
 }
